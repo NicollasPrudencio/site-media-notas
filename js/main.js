@@ -39,14 +39,6 @@ function atualizaTabela() {
     corpoTabela.innerHTML = linhas;
 }
 
-function atualizaMediaFinal() {
-const mediaFinal = calculaMediaFinal();
-    console.log(mediaFinal);
-    document.getElementById('media-final-valor').innerHTML = mediaFinal;
-    document.getElementById('media-final-resultado').innerHTML = mediaFinal >=7 ? 'Aprovado' : 'Reprovado';
-
-}
-
 function calculaMediaFinal() {
     let somaDasNotas = 0;
 
@@ -55,4 +47,11 @@ function calculaMediaFinal() {
     }
 
     return somaDasNotas / notas.length;
+}
+
+function atualizaMediaFinal() {
+const mediaFinal = calculaMediaFinal();
+    document.getElementById('media-final-valor').innerHTML = mediaFinal;
+    document.getElementById('media-final-resultado').innerHTML = mediaFinal >=7 ? 'Aprovado' : 'Reprovado';
+
 }
